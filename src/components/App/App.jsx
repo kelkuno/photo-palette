@@ -19,6 +19,10 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import PaletteList from '../PaletteList/PaletteList';
+
+
+
 
 import './App.css';
 
@@ -67,6 +71,15 @@ function App() {
           >
             <InfoPage />
           </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows PaletteList else shows LoginPage
+            exact
+            path="/palette-list"
+          >
+            <PaletteList />
+          </ProtectedRoute>
+
 
           <Route
             exact
