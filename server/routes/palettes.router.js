@@ -6,9 +6,13 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
-  const queryText = `SELECT * FROM "palette";`
+  console.log('req.user', req.user);
+  const queryText = `SELECT * FROM "palette"
+  WHERE "palette".user_id = $1;`
 
-  pool.query(queryText)
+  let value = [req.user.id]
+
+  pool.query(queryText, value)
     .then( result=> {
         console.log('this is what the get sends', result.rows);
         res.send(result.rows)
