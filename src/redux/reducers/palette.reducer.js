@@ -1,4 +1,4 @@
-const paletteReducer = (state = {}, action) => {
+const paletteReducer = (state = [], action) => {
     switch (action.type) {
       case 'SET_PALETTE':
         return action.payload;

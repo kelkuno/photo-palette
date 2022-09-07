@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PaletteItem from '../PaletteItem/PaletteItem';
 import PaletteDetail from '../PaletteDetail/PaletteDetail';
-
+import './PaletteList.css';
 
 
 
@@ -27,8 +27,20 @@ function PaletteList () {
         <>
             
             <h2>This is palette list component</h2>
+            {palette.map(color =>{
+            
+                return (
+                    
+                    <PaletteItem 
+                    key= {color.id}
+                    color={color}
+                    />
+                    
+                );
+            })}
+
             <PaletteForm />
-            <PaletteItem />
+            
             <PaletteDetail />
 
         
