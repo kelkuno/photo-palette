@@ -6,7 +6,7 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
-  const queryText = `SELECT "hex0","hex1","hex2","hex3","hex4","hex5" FROM "palette";`
+  const queryText = `SELECT * FROM "palette";`
 
   pool.query(queryText)
     .then( result=> {

@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PaletteItem from '../PaletteItem/PaletteItem';
 import PaletteDetail from '../PaletteDetail/PaletteDetail';
-import paletteSaga from '../../redux/sagas/palette.saga';
+
 
 
 
@@ -12,6 +12,7 @@ import paletteSaga from '../../redux/sagas/palette.saga';
 function PaletteList () {
 
     const user = useSelector(store => store.user)
+    const palette = useSelector(store => store.palette)
 
     const dispatch = useDispatch();
 
@@ -19,7 +20,8 @@ function PaletteList () {
         dispatch({type: 'FETCH_PALETTES'})
     }, []);
 
-    console.log(user);
+    console.log('user', user);
+    console.log('palette', palette);
 
     return (
         <>
