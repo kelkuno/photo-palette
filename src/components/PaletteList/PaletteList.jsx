@@ -1,5 +1,6 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useEffect} from 'react';
+import {useHistory} from 'react-router-dom';
 
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PaletteItem from '../PaletteItem/PaletteItem';
@@ -15,6 +16,7 @@ function PaletteList () {
     const palette = useSelector(store => store.palette)
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     useEffect(()=>{
         dispatch({type: 'FETCH_PALETTES'})
@@ -23,10 +25,14 @@ function PaletteList () {
     console.log('user', user);
     console.log('palette', palette);
 
+    const handleNewPalette = () => {
+        history.push('/palette-form')
+        
+
+    }//end of handleNew Palette
+
     return (
         <>
-            
-            <h2>This is palette list component</h2>
             {palette.map(color =>{
             
                 return (
@@ -38,7 +44,7 @@ function PaletteList () {
                     
                 );
             })}
-
+            <button onClick={handleNewPalette}>Generate Palette</button>
             <PaletteForm />
             
             <PaletteDetail />

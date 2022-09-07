@@ -14,7 +14,6 @@ function PaletteItem ({color}) {
          
         <div className="palette-container">
             
-            {/* {user.id === color.user_id ?} */}
             {/* color #1 */}
             <div 
             className="palette-color"
