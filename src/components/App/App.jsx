@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import PaletteList from '../PaletteList/PaletteList';
 import PaletteForm from '../PaletteForm/PaletteForm';
+import PaletteDetail from '../PaletteDetail/PaletteDetail';
 
 
 
@@ -82,13 +83,20 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows PaletteList else shows LoginPage
+            // logged in shows PaletteForm else shows LoginPage
             exact
             path="/palette-form"
           >
             <PaletteForm />
           </ProtectedRoute>
 
+          <ProtectedRoute
+            // logged in shows PaletteDetail else shows LoginPage
+            exact
+            path="/palette-detail"
+          >
+            <PaletteDetail />
+          </ProtectedRoute>
 
           <Route
             exact

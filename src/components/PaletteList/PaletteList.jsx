@@ -43,9 +43,8 @@ function PaletteList () {
                 );
             })}
             <button onClick={handleNewPalette}>Generate Palette</button>
-            <PaletteForm />
+        
             
-            <PaletteDetail />
 
         
         </>
