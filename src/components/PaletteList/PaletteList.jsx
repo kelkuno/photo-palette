@@ -27,8 +27,6 @@ function PaletteList () {
 
     const handleNewPalette = () => {
         history.push('/palette-form')
-        
-
     }//end of handleNew Palette
 
     return (
