@@ -1,0 +1,9 @@
+.color-box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+    margin: 0 auto;
+  }
+  .container {
+    display: flex;
+  }

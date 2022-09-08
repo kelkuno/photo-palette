@@ -14,12 +14,22 @@ function* fetchPalettes(action) {
     } catch (error) {
         console.log('error w palettes GET', error);
     }
+}//end of fetchPalette worker function
 
-}//end of worker fetchPalette function
+// function* stageColors(action){
+//     try {
+        
+
+//     } catch(error){
+//         console.log('error in the add colors')
+//     }
+
+// }//end of addColors worker function.
 
 //root generator functions
 function* paletteSaga() {
-    yield takeEvery('FETCH_PALETTES', fetchPalettes)
+    yield takeEvery('FETCH_PALETTES', fetchPalettes);
+    // yield takeEvery('STAGE_COLORS', stageColors);
 
 }//end of paletteSaga;
 
