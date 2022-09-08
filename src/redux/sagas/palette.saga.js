@@ -16,20 +16,21 @@ function* fetchPalettes(action) {
     }
 }//end of fetchPalette worker function
 
-// function* stageColors(action){
-//     try {
+function* addPalette(action){
+    try {
+        yield axios.post('/api/palettes/', action.payload);
+        yield put({type: 'FETCH_PALETTES'});
         
+    } catch(error){
+        console.log('error in the add colors')
+    }
 
-//     } catch(error){
-//         console.log('error in the add colors')
-//     }
-
-// }//end of addColors worker function.
+}//end of addColors worker function.
 
 //root generator functions
 function* paletteSaga() {
     yield takeEvery('FETCH_PALETTES', fetchPalettes);
-    // yield takeEvery('STAGE_COLORS', stageColors);
+    yield takeEvery('ADD_PALETTE', addPalette);
 
 }//end of paletteSaga;
 

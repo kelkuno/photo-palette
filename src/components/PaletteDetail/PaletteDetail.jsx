@@ -27,8 +27,10 @@ function PaletteDetail () {
     
     const handleSave = () => {
         console.log('handleSave');
-        
-      
+        dispatch({type: 'ADD_PALETTE',
+        payload: {newPalette: newPalette}
+        });
+        history.push('/palette-list');
     }
     console.log(newPalette);
     console.log('this is colors', colors);
