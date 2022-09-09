@@ -22,7 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import PaletteList from '../PaletteList/PaletteList';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PaletteDetail from '../PaletteDetail/PaletteDetail';
-
+import PaletteDetailDB from '../PaletteDetailDB/PaletteDetailDB';
 
 
 
@@ -96,6 +96,14 @@ function App() {
             path="/palette-detail"
           >
             <PaletteDetail />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows PaletteDetail else shows LoginPage
+            exact
+            path="/palette-detail-db"
+          >
+            <PaletteDetailDB />
           </ProtectedRoute>
 
           <Route

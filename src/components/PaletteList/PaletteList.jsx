@@ -29,6 +29,8 @@ function PaletteList () {
         history.push('/palette-form')
     }//end of handleNew Palette
 
+   
+
     return (
         <>
             {palette.map(color =>{
@@ -38,6 +40,7 @@ function PaletteList () {
                     <PaletteItem 
                     key= {color.id}
                     color={color}
+                    
                     />
                     
                 );

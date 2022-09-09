@@ -32,6 +32,11 @@ function PaletteDetail () {
         });
         history.push('/palette-list');
     }
+
+    const handleBack = () => {
+        history.push('/palette-list');
+    }//end of handleBack
+    
     console.log(newPalette);
     console.log('this is colors', colors);
 
@@ -54,7 +59,7 @@ function PaletteDetail () {
                 </div>
             ))}
             </div> 
-            <button>Back</button>
+            <button onClick={handleBack}>Back</button>
             <button>Delete</button>
             <button>Edit</button>
             <button onClick={handleSave}>Save Palette</button>

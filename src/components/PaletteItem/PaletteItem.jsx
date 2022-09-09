@@ -1,18 +1,36 @@
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {useHistory} from 'react-router-dom';
 import './PaletteItem.css';
 
 
 
 function PaletteItem ({color}) {
 
+    const history = useHistory();
+    const dispatch = useDispatch();
+
     const user = useSelector(store => store.user)
     console.log('this is user', user);
     console.log('this is color', color);
 
+    const handlePaletteDetail = () => {
+        console.log('handlePalette clicked');
+        dispatch({
+            type: 'STAGE_PALETTE',
+            payload: color
+        })
+        
+        history.push('/palette-detail-db');
+
+    }//end of handlePaletteDetail
+
 
     return (
          
-        <div className="palette-container">
+        <div 
+        className="palette-container"
+        onClick={handlePaletteDetail}
+        >
             
             {/* color #1 */}
             <div 

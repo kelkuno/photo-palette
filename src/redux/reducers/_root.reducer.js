@@ -3,6 +3,9 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import palette from './palette.reducer';
 import newPalette from './newPalette.reducer';
+import stagedPalette from './stagedPalette.reducer';
+
+
 
 
 // rootReducer is the primary reducer for our entire project
@@ -16,6 +19,7 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   palette, //contains palette info from database
   newPalette, //contains individual palette info. 
+  stagedPalette//contains palette info from DB stored in a reducer. 
 });
 
 export default rootReducer;
