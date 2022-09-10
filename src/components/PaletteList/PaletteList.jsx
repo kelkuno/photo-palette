@@ -14,6 +14,7 @@ function PaletteList () {
 
     const user = useSelector(store => store.user)
     const palette = useSelector(store => store.palette)
+    const stagedPalette = useSelector(store => store.stagedPalette);
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -24,6 +25,8 @@ function PaletteList () {
 
     console.log('user', user);
     console.log('palette', palette);
+    console.log('stagedPalette', stagedPalette);
+
 
     const handleNewPalette = () => {
         history.push('/palette-form')

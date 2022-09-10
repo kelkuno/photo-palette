@@ -18,6 +18,9 @@ function PaletteDetailDB () {
 
    const handleBack = () => {
       history.push('/palette-list');
+      dispatch({
+        type: 'CLEAR_STAGED_PALETTE'
+      })
    };//end of handleBack
 
    const testFunction = () =>{
@@ -37,7 +40,7 @@ function PaletteDetailDB () {
 
    };//end of handleEdit
 
-// console.log('this is stagedPalette reducer', stagedPalette.id);
+   console.log('this is stagedPalette reducer', stagedPalette);
    console.log('this is stageColor', stageColor);
    console.log('color 1', color1);
 
