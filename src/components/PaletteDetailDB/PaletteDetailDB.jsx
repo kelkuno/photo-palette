@@ -9,14 +9,21 @@ function PaletteDetailDB () {
 
    const stagedPalette = useSelector(store => store.stagedPalette);
    const [stageColor, setStageColor] = useState('#fff');
+   const [color1, setColor1] = useState(stagedPalette.hex0);
 
    const handleColorChange = (color) => {
         setStageColor(color.hex);
+        setColor1(stageColor);
   };//end of colorChange
 
    const handleBack = () => {
       history.push('/palette-list');
    };//end of handleBack
+
+   const testFunction = () =>{
+        setStageColor(color1);
+
+   };
 
    const handleDelete = () => {
       console.log('delete clicked!');
@@ -25,13 +32,14 @@ function PaletteDetailDB () {
       history.push('/palette-list');
    };//end of handleDelete
 
-   const handleEdit = () => {
+   const handleSave = () => {
       console.log('clicked');
 
    };//end of handleEdit
 
-//    console.log('this is stagedPalette reducer', stagedPalette.id);
+// console.log('this is stagedPalette reducer', stagedPalette.id);
    console.log('this is stageColor', stageColor);
+   console.log('color 1', color1);
 
    return(
     <>
@@ -42,9 +50,10 @@ function PaletteDetailDB () {
                {/* color #1 */}
             <div 
             className="palette-color"
-            style={{backgroundColor: stagedPalette.hex0}}
+            style={{backgroundColor: color1}}
+            onClick={testFunction}
             >
-                <p>{stagedPalette.hex0}</p>
+                <p>{color1}</p>
             </div>
 
             {/* color #2 */}
@@ -94,7 +103,7 @@ function PaletteDetailDB () {
         />
       <button onClick={handleBack}>Back</button>
       <button onClick={handleDelete}>Delete</button>
-      <button onClick={handleEdit}>Edit</button>
+      <button onClick={handleSave}>Save</button>
     </>
     
    )
