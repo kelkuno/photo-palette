@@ -18,6 +18,11 @@ function PaletteDetailDB () {
       history.push('/palette-list');
    }//end of handleDelete
 
+   const handleEdit = () => {
+      console.log('clicked');
+
+   }//end of handleEdit
+
    console.log('this is stagedPalette reducer', stagedPalette.id);
 
    return(
@@ -78,6 +83,7 @@ function PaletteDetailDB () {
       </div> 
       <button onClick={handleBack}>Back</button>
       <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleEdit}>Edit</button>
     </>
     
    )

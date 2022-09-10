@@ -30,9 +30,11 @@ function PaletteForm () {
             payload: {name: name, pic: pic}
         })
         history.push('/palette-detail')
-
     }//end of handleSubmit
 
+    const handleBack = () => {
+        history.push('/palette-list');
+     }//end of handleBack
 
     return (
         <>
@@ -49,6 +51,7 @@ function PaletteForm () {
                 />
                 <button>Generate Palette</button>
             </form>
+            <button onClick={handleBack}>Back</button>
         </>
     );
 } // end of PaletteForm
