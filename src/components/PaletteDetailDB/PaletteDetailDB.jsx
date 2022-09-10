@@ -1,29 +1,37 @@
 import {useHistory} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
+import { ChromePicker } from 'react-color';
+import {useState} from 'react';
 
 function PaletteDetailDB () {
    const history = useHistory();
    const dispatch = useDispatch();
 
    const stagedPalette = useSelector(store => store.stagedPalette);
+   const [stageColor, setStageColor] = useState('#fff');
+
+   const handleColorChange = (color) => {
+        setStageColor(color.hex);
+  };//end of colorChange
 
    const handleBack = () => {
       history.push('/palette-list');
-   }//end of handleBack
+   };//end of handleBack
 
    const handleDelete = () => {
       console.log('delete clicked!');
       dispatch({type:'DELETE_PALETTE',
          payload: {id: stagedPalette.id}});
       history.push('/palette-list');
-   }//end of handleDelete
+   };//end of handleDelete
 
    const handleEdit = () => {
       console.log('clicked');
 
-   }//end of handleEdit
+   };//end of handleEdit
 
-   console.log('this is stagedPalette reducer', stagedPalette.id);
+//    console.log('this is stagedPalette reducer', stagedPalette.id);
+   console.log('this is stageColor', stageColor);
 
    return(
     <>
@@ -78,9 +86,12 @@ function PaletteDetailDB () {
             >
                 <p>{stagedPalette.hex5}</p>
             </div>
-            
-         
       </div> 
+      <ChromePicker
+            color={stageColor}
+            onChange ={handleColorChange}
+            disableAlpha={true}
+        />
       <button onClick={handleBack}>Back</button>
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleEdit}>Edit</button>
