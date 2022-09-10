@@ -46,4 +46,26 @@ router.post('/', (req, res) => {
   })
 });
 
+/**
+ * DELETE route template
+ */
+router.delete('/:id', (req,res) => {
+
+  const id = req.params.id;
+
+  console.log('this is req.params', req.params.id);
+  const queryText = `DELETE FROM "palette"
+  WHERE "palette".id = $1;`
+
+  const queryValues = [id];
+
+  pool.query(queryText, queryValues)
+  .then(result => {
+    res.sendStatus(201);
+  }).catch(err => {
+    res.sendStatus(500);
+  })
+})
+
+
 module.exports = router;

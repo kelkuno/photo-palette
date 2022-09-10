@@ -27,10 +27,22 @@ function* addPalette(action){
 
 }//end of addColors worker function.
 
+function* deletePalette(action) {
+    try {
+        yield axios.delete(`/api/palettes/${action.payload.id}`, action.payload);
+        yield put({type: 'FETCH_PALETTES'});
+
+    }catch(error){
+        console.log('error in delete colors')
+    }
+
+}//end of deletePalette worker function. 
+
 //root generator functions
 function* paletteSaga() {
     yield takeEvery('FETCH_PALETTES', fetchPalettes);
     yield takeEvery('ADD_PALETTE', addPalette);
+    yield takeEvery('DELETE_PALETTE', deletePalette);
 
 }//end of paletteSaga;
 

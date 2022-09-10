@@ -1,8 +1,9 @@
 import {useHistory} from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 function PaletteDetailDB () {
    const history = useHistory();
+   const dispatch = useDispatch();
 
    const stagedPalette = useSelector(store => store.stagedPalette);
 
@@ -10,7 +11,14 @@ function PaletteDetailDB () {
       history.push('/palette-list');
    }//end of handleBack
 
-   console.log('this is stagedPalette reducer', stagedPalette);
+   const handleDelete = () => {
+      console.log('delete clicked!');
+      dispatch({type:'DELETE_PALETTE',
+         payload: {id: stagedPalette.id}});
+      history.push('/palette-list');
+   }//end of handleDelete
+
+   console.log('this is stagedPalette reducer', stagedPalette.id);
 
    return(
     <>
@@ -69,6 +77,7 @@ function PaletteDetailDB () {
          
       </div> 
       <button onClick={handleBack}>Back</button>
+      <button onClick={handleDelete}>Delete</button>
     </>
     
    )
