@@ -10,6 +10,12 @@ function PaletteDetailDB () {
    const stagedPalette = useSelector(store => store.stagedPalette);
    const [stageColor, setStageColor] = useState('#fff');
    const [color1, setColor1] = useState(stagedPalette.hex0);
+   const [color2, setColor2] = useState(stagedPalette.hex1);
+   const [color3, setColor3] = useState(stagedPalette.hex2);
+   const [color4, setColor4] = useState(stagedPalette.hex3);
+   const [color5, setColor5] = useState(stagedPalette.hex4);
+   const [color6, setColor6] = useState(stagedPalette.hex5);
+
 
    const handleColorChange = (color) => {
         setStageColor(color.hex);
@@ -65,41 +71,41 @@ function PaletteDetailDB () {
             {/* color #2 */}
             <div 
             className="palette-color"
-            style={{backgroundColor: stagedPalette.hex1}}
+            style={{backgroundColor: color2}}
             >
-                <p>{stagedPalette.hex1}</p>
+                <p>{color2}</p>
             </div>
 
             {/* color #3 */}
             <div 
             className="palette-color"
-            style={{backgroundColor: stagedPalette.hex2}}
+            style={{backgroundColor: color3}}
             >
-                <p>{stagedPalette.hex2}</p>
+                <p>{color3}</p>
             </div>
 
             {/* color #4 */}
             <div 
             className="palette-color"
-            style={{backgroundColor: stagedPalette.hex3}}
+            style={{backgroundColor: color4}}
             >
-                <p>{stagedPalette.hex3}</p>
+                <p>{color4}</p>
             </div>
 
             {/* color #5 */}
             <div 
             className="palette-color"
-            style={{backgroundColor: stagedPalette.hex4}}
+            style={{backgroundColor: color5}}
             >
-                <p>{stagedPalette.hex4}</p>
+                <p>{color5}</p>
             </div>
 
             {/* color #6 */}
             <div 
             className="palette-color"
-            style={{backgroundColor: stagedPalette.hex5}}
+            style={{backgroundColor: color6}}
             >
-                <p>{stagedPalette.hex5}</p>
+                <p>{color6}</p>
             </div>
       </div> 
       <ChromePicker
