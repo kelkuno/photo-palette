@@ -4,7 +4,6 @@ import {useHistory} from 'react-router-dom';
 
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PaletteItem from '../PaletteItem/PaletteItem';
-import PaletteDetail from '../PaletteDetail/PaletteDetail';
 import './PaletteList.css';
 
 

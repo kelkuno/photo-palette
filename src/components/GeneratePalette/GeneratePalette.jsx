@@ -2,7 +2,7 @@ import {ColorExtractor} from 'react-color-extractor';
 import {useState, useEffect} from 'react';
 import  {useHistory} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import './PaletteDetail.css';
+import './GeneratePalette.css';
 
 function PaletteDetail () {
 

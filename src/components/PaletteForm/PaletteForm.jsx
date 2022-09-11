@@ -29,7 +29,7 @@ function PaletteForm () {
             type: 'SET_NAME_PIC',
             payload: {name: name, pic: pic}
         })
-        history.push('/palette-detail')
+        history.push('/generate-palette')
     }//end of handleSubmit
 
     const handleBack = () => {
