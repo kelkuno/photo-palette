@@ -29,10 +29,10 @@ function PaletteDetailDB () {
       })
    };//end of handleBack
 
-   const testFunction = () =>{
-        setStageColor(color1);
+//    const testFunction = () =>{
+//         setStageColor(color1);
 
-   };
+//    };
 
    const handleDelete = () => {
       console.log('delete clicked!');
@@ -63,7 +63,7 @@ function PaletteDetailDB () {
             <div 
             className="palette-color"
             style={{backgroundColor: color1}}
-            onClick={testFunction}
+            onClick={()=>{setStageColor(color1);}}
             >
                 <p>{color1}</p>
             </div>
@@ -72,6 +72,7 @@ function PaletteDetailDB () {
             <div 
             className="palette-color"
             style={{backgroundColor: color2}}
+            onClick={()=>{setStageColor(color2);}}
             >
                 <p>{color2}</p>
             </div>
@@ -80,6 +81,8 @@ function PaletteDetailDB () {
             <div 
             className="palette-color"
             style={{backgroundColor: color3}}
+            onClick={()=>{setStageColor(color3);}}
+
             >
                 <p>{color3}</p>
             </div>
@@ -88,6 +91,8 @@ function PaletteDetailDB () {
             <div 
             className="palette-color"
             style={{backgroundColor: color4}}
+            onClick={()=>{setStageColor(color4);}}
+
             >
                 <p>{color4}</p>
             </div>
@@ -96,6 +101,8 @@ function PaletteDetailDB () {
             <div 
             className="palette-color"
             style={{backgroundColor: color5}}
+            onClick={()=>{setStageColor(color5);}}
+
             >
                 <p>{color5}</p>
             </div>
@@ -104,6 +111,8 @@ function PaletteDetailDB () {
             <div 
             className="palette-color"
             style={{backgroundColor: color6}}
+            onClick={()=>{setStageColor(color6);}}
+
             >
                 <p>{color6}</p>
             </div>
