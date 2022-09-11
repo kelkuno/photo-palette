@@ -43,14 +43,12 @@ function PaletteDetailDB () {
 
    const handleSave = () => {
       console.log('clicked');
+  
       dispatch({
-        type: 'UPDATE_COLORS_TO_REDUCER',
-        payload:{hex0:color1, hex1: color2, hex2: color3, hex3: color4, hex4: color5, hex5: color6}
-      });
-      dispatch({
-        type: 'UPDATE_PALETTE',
-        payload: {stagedPalette:stagedPalette}
+        type: 'UPDATE_COLORS',
+        payload: {hex0: color1, id: stagedPalette.id}
       })
+      history.push('/palette-list');
 
    };//end of handleEdit
 

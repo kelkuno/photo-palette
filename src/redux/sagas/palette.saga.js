@@ -38,31 +38,23 @@ function* deletePalette(action) {
 
 }//end of deletePalette worker function. 
 
-function* updateReducer(action) {
+function* updateColors(action) {
     try {
-        yield put({type:'UPDATE_COLORS_TO_REDUCER', payload});
-    }catch(error){
-        console.log('error in delete colors')
-    }
-}//end of updateReducer worker function. 
-
-function* updatePalette(action) {
-    try {
-        yield axios.put(`/api/palettes/`, {stagedPalette: action.payload.stagedPalette});
+        yield axios.put(`/api/palettes/${action.payload.id}`, {color1: action.payload.hex0});
         yield put({type: 'FETCH_PALETTES'});
 
     }catch(error){
         console.log('error in delete colors')
     }
-}//end of updateReducer worker function. 
+}//end of updateColors worker function. 
 
 //root generator functions
 function* paletteSaga() {
     yield takeEvery('FETCH_PALETTES', fetchPalettes);
     yield takeEvery('ADD_PALETTE', addPalette);
     yield takeEvery('DELETE_PALETTE', deletePalette);
-    yield takeEvery('UPDATE_COLORS_TO_REDUCER', updateReducer);
-    yield takeEvery('UPDATE_PALETTE', updatePalette);
+    // yield takeEvery('UPDATE_COLORS_TO_REDUCER', updateReducer);
+    yield takeEvery('UPDATE_COLORS', updateColors);
 
 }//end of paletteSaga;
 

@@ -23,10 +23,6 @@ quantity5: 16.66 }, action) => {
         hex4:'',hex5:'', quantity0: 16.66, quantity1: 16.66,
         quantity2: 16.66, quantity3: 16.66, quantity4: 16.66,
         quantity5: 16.66 };
-      case 'UPDATE_COLORS_TO_REDUCER':
-        return {...state, hex0: action.payload.hex0, hex1: action.payload.hex1,
-          hex2: action.payload.hex2, hex3: action.payload.hex3,
-          hex4: action.payload.hex4, hex5: action.payload.hex5};
       default:
         return state;
     }
