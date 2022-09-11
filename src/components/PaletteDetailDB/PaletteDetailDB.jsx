@@ -48,6 +48,9 @@ function PaletteDetailDB () {
     <>
       <h2>this is palette detail DB</h2>
       <img src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?b=1&k=20&m=1172427455&s=612x612&w=0&h=5e5ZY9KtcF86MolxsA1j_MgylIMjMJqXcqnOONVypO4=" className="sunset" alt="logo" />
+      <button onClick={handleBack}>Back</button>
+      <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleSave}>Save</button>
       <div className="container">
       
                {/* color #1 */}
@@ -104,9 +107,7 @@ function PaletteDetailDB () {
             onChange ={handleColorChange}
             disableAlpha={true}
         />
-      <button onClick={handleBack}>Back</button>
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={handleSave}>Save</button>
+      
     </>
     
    )
