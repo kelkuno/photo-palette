@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 import errors from './errors.reducer';
 import user from './user.reducer';
 import palette from './palette.reducer';
-import newPalette from './newPalette.reducer';
 import stagedPalette from './stagedPalette.reducer';
 
 
@@ -18,7 +17,6 @@ const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user, // will have an id and username if someone is logged in
   palette, //contains palette info from database
-  newPalette, //contains individual palette info. 
   stagedPalette//contains palette info from DB stored in a reducer. 
 });
 

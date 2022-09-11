@@ -29,6 +29,7 @@ function PaletteList () {
 
 
     const handleNewPalette = () => {
+        dispatch({type:'PREPARE_FORM'});
         history.push('/palette-form')
     }//end of handleNew Palette
 

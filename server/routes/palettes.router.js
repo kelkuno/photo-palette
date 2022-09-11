@@ -31,12 +31,12 @@ router.post('/', (req, res) => {
   const queryText =`INSERT INTO "palette" ("img_url", "user_id", "palette_name", "hex0", "hex1", "hex2", "hex3", "hex4", "hex5", "quantity0", "quantity1", "quantity2", "quantity3", "quantity4", "quantity5")
   VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)`;
 
-  const queryValues = [req.body.newPalette.img_url, req.user.id, 
-  req.body.newPalette.palette_name, req.body.newPalette.hex0, req.body.newPalette.hex1,
-  req.body.newPalette.hex2, req.body.newPalette.hex3, req.body.newPalette.hex4,
-  req.body.newPalette.hex5, req.body.newPalette.quantity0, req.body.newPalette.quantity1,
-  req.body.newPalette.quantity2, req.body.newPalette.quantity3, req.body.newPalette.quantity4,
-  req.body.newPalette.quantity5]
+  const queryValues = [req.body.stagedPalette.img_url, req.user.id, 
+  req.body.stagedPalette.palette_name, req.body.stagedPalette.hex0, req.body.stagedPalette.hex1,
+  req.body.stagedPalette.hex2, req.body.stagedPalette.hex3, req.body.stagedPalette.hex4,
+  req.body.stagedPalette.hex5, req.body.stagedPalette.quantity0, req.body.stagedPalette.quantity1,
+  req.body.stagedPalette.quantity2, req.body.stagedPalette.quantity3, req.body.stagedPalette.quantity4,
+  req.body.stagedPalette.quantity5]
 
   pool.query(queryText, queryValues)
   .then(result => {

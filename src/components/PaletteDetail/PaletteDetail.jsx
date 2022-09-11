@@ -6,7 +6,7 @@ import './PaletteDetail.css';
 
 function PaletteDetail () {
 
-    const newPalette = useSelector(store => store.newPalette);
+    const stagedPalette = useSelector(store => store.stagedPalette);
     const [colors, setColors] = useState([]);
 
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ function PaletteDetail () {
     const handleSave = () => {
         console.log('handleSave');
         dispatch({type: 'ADD_PALETTE',
-        payload: {newPalette: newPalette}
+        payload: {stagedPalette: stagedPalette}
         });
         history.push('/palette-list');
     }
@@ -37,7 +37,7 @@ function PaletteDetail () {
         history.push('/palette-list');
     }//end of handleBack
     
-    console.log(newPalette);
+    console.log(stagedPalette);
     console.log('this is colors', colors);
 
     return (
