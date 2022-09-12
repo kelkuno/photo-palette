@@ -8,6 +8,7 @@ function PaletteDetail () {
 
     const stagedPalette = useSelector(store => store.stagedPalette);
     const [colors, setColors] = useState([]);
+    const [pic, setPic] = useState(stagedPalette.img_url);
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -39,6 +40,7 @@ function PaletteDetail () {
     
     console.log(stagedPalette);
     console.log('this is colors', colors);
+    console.log(pic);
 
     return (
         <>
@@ -46,7 +48,8 @@ function PaletteDetail () {
             getColors={getColors} 
             maxColors={256}
             >
-                <img src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?b=1&k=20&m=1172427455&s=612x612&w=0&h=5e5ZY9KtcF86MolxsA1j_MgylIMjMJqXcqnOONVypO4=" className="sunset" alt="logo" />
+                <img src={pic} alt="user-Upload" />
+            
             </ColorExtractor>
             <div className="container">
             {colors.map((color, id) => (

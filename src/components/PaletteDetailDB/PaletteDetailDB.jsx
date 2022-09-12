@@ -9,6 +9,7 @@ function PaletteDetailDB () {
 
    const stagedPalette = useSelector(store => store.stagedPalette);
    const [stageColor, setStageColor] = useState('#fff');
+   const pic = stagedPalette.img_url;
    const [color1, setColor1] = useState(stagedPalette.hex0);
    const [color2, setColor2] = useState(stagedPalette.hex1);
    const [color3, setColor3] = useState(stagedPalette.hex2);
@@ -59,7 +60,7 @@ function PaletteDetailDB () {
    return(
     <>
       <h2>this is palette detail DB</h2>
-      <img src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?b=1&k=20&m=1172427455&s=612x612&w=0&h=5e5ZY9KtcF86MolxsA1j_MgylIMjMJqXcqnOONVypO4=" className="sunset" alt="logo" />
+      <img src={pic} className="user-pic" />
       <button onClick={handleBack}>Back</button>
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleSave}>Save</button>
