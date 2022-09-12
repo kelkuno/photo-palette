@@ -2,6 +2,7 @@ import {useHistory} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
+import ColorItem from '../ColorItem/ColorItem';
 
 function PaletteDetailDB () {
    const history = useHistory();
@@ -71,6 +72,7 @@ function PaletteDetailDB () {
       <button onClick={handleBack}>Back</button>
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleSave}>Save</button>
+      <ColorItem />
       <div className="container">
       
                {/* color #1 */}
