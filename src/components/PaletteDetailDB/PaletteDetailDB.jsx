@@ -10,6 +10,7 @@ function PaletteDetailDB () {
    const stagedPalette = useSelector(store => store.stagedPalette);
    const [stageColor, setStageColor] = useState('#fff');
    const pic = stagedPalette.img_url;
+   const [mask, setMask] = useState(true);
    const [color1, setColor1] = useState(stagedPalette.hex0);
    const [color2, setColor2] = useState(stagedPalette.hex1);
    const [color3, setColor3] = useState(stagedPalette.hex2);
@@ -30,6 +31,11 @@ function PaletteDetailDB () {
       })
    };//end of handleBack
 
+   const handleEdit = () => {
+        console.log('edit clicked');
+        setMask(!mask);
+
+   } // end of handleEdit
 //    const testFunction = () =>{
 //         setStageColor(color1);
 
@@ -56,6 +62,7 @@ function PaletteDetailDB () {
    console.log('this is stagedPalette reducer', stagedPalette);
    console.log('this is stageColor', stageColor);
    console.log('color 1', color1);
+   console.log('this is mask:', mask);
 
    return(
     <>
@@ -73,6 +80,7 @@ function PaletteDetailDB () {
             onClick={()=>{setStageColor(color1);}}
             >
                 <p>{color1}</p>
+                <button onClick={handleEdit}>Edit</button>
             </div>
 
             {/* color #2 */}
@@ -124,11 +132,14 @@ function PaletteDetailDB () {
                 <p>{color6}</p>
             </div>
       </div> 
-      <ChromePicker
-            color={stageColor}
-            onChange ={handleColorChange}
-            disableAlpha={true}
+      {!mask && 
+        <ChromePicker
+        color={stageColor}
+        onChange ={handleColorChange}
+        disableAlpha={true}
         />
+      }
+      
       
     </>
     
