@@ -1,12 +1,10 @@
 .palette-color{
     width: 100px;
     height: 100 px;
-    border: solid 2px red;
     margin: 0 auto;
 }
 
 .palette-container {
     display: flex;
-    border: solid 2px green;
     padding: 100px 0;
 }
