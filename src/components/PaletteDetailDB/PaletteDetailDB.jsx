@@ -16,7 +16,6 @@ function PaletteDetailDB () {
    const stagedPalette = useSelector(store => store.stagedPalette);
    const [stageColor, setStageColor] = useState('#fff');
    const pic = stagedPalette.img_url;
-   const [mask, setMask] = useState(true);
    const [color1, setColor1] = useState(stagedPalette.hex0);
    const [color2, setColor2] = useState(stagedPalette.hex1);
    const [color3, setColor3] = useState(stagedPalette.hex2);
@@ -40,8 +39,8 @@ function PaletteDetailDB () {
    const handleEdit = () => {
         console.log('edit clicked');
         setMask(!mask);
-
    } // end of handleEdit
+
 //    const testFunction = () =>{
 //         setStageColor(color1);
 
@@ -68,7 +67,7 @@ function PaletteDetailDB () {
    console.log('this is stagedPalette reducer', stagedPalette);
    console.log('this is stageColor', stageColor);
    console.log('color 1', color1);
-   console.log('this is mask:', mask);
+//    console.log('this is mask:', mask);
 
 
    return(
@@ -78,32 +77,46 @@ function PaletteDetailDB () {
       <button onClick={handleBack}>Back</button>
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleSave}>Save</button>
-      <ColorItem />
+      
       <div className="container">
+            <ColorItem 
+            color={color1}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange}
+            onClick={()=>{setStageColor(color1);}}
+            />
+            <ColorItem 
+            color={color2}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange}
+            onClick={()=>{setStageColor(color2);}}
+            />
       
                {/* color #1 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color1}}
             onClick={()=>{setStageColor(color1);}}
-            >
-                <p>{color1}</p>
+            > */}
+                {/* <p>{color1}</p>
                 <FontAwesomeIcon 
                 icon={faPenToSquare}
                 onClick={handleEdit}
-                />
+                /> */}
                 {/* <FontAwesomeIcon icon="fa-solid fa-pen-to-square" /> */}
-                
-            </div>
+{/*                 
+            </div> */}
 
             {/* color #2 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color2}}
             onClick={()=>{setStageColor(color2);}}
             >
                 <p>{color2}</p>
-            </div>
+            </div> */}
 
             {/* color #3 */}
             <div 
@@ -145,13 +158,7 @@ function PaletteDetailDB () {
                 <p>{color6}</p>
             </div>
       </div> 
-      {!mask && 
-        <ChromePicker
-        color={stageColor}
-        onChange ={handleColorChange}
-        disableAlpha={true}
-        />
-      }
+      
       
       
     </>
