@@ -39,12 +39,12 @@ function PaletteList () {
             {palette.map(color =>{
             
                 return (
-                    
-                    <PaletteItem 
-                    key= {color.id}
-                    color={color}
-                    
-                    />
+                    <div className="palette-list-container">
+                        <PaletteItem 
+                        key= {color.id}
+                        color={color}
+                        />
+                    </div>
                     
                 );
             })}

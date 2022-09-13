@@ -2,6 +2,11 @@ import {useHistory} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
+//fontawesome
+import {FontAwesomeIcon}from '@fortawesome/react-fontawesome';
+import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
+// import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core'
+
 
 function PaletteDetailDB () {
    const history = useHistory();
@@ -64,6 +69,7 @@ function PaletteDetailDB () {
    console.log('color 1', color1);
    console.log('this is mask:', mask);
 
+
    return(
     <>
       <h2>this is palette detail DB</h2>
@@ -80,7 +86,12 @@ function PaletteDetailDB () {
             onClick={()=>{setStageColor(color1);}}
             >
                 <p>{color1}</p>
-                <button onClick={handleEdit}>Edit</button>
+                <FontAwesomeIcon 
+                icon={faPenToSquare}
+                onClick={handleEdit}
+                />
+                {/* <FontAwesomeIcon icon="fa-solid fa-pen-to-square" /> */}
+                
             </div>
 
             {/* color #2 */}

@@ -2,9 +2,12 @@
     width: 100px;
     height: 100 px;
     margin: 0 auto;
+    border: solid 2px red;
 }
 
 .palette-container {
     display: flex;
     padding: 100px 0;
+    border: solid 2px green;
+
 }
