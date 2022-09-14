@@ -3,10 +3,6 @@ import {useSelector, useDispatch} from 'react-redux';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
 import ColorItem from '../ColorItem/ColorItem.jsx';
-//fontawesome
-import {FontAwesomeIcon}from '@fortawesome/react-fontawesome';
-import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
-// import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core'
 
 
 function PaletteDetailDB () {
@@ -146,70 +142,6 @@ function PaletteDetailDB () {
             onClick={()=>{setStageColor(color6);}}
             />
             
-      
-               {/* color #1 */}
-            {/* <div 
-            className="palette-color"
-            style={{backgroundColor: color1}}
-            onClick={()=>{setStageColor(color1);}}
-            > */}
-                {/* <p>{color1}</p>
-                <FontAwesomeIcon 
-                icon={faPenToSquare}
-                onClick={handleEdit}
-                /> */}
-                {/* <FontAwesomeIcon icon="fa-solid fa-pen-to-square" /> */}
-{/*                 
-            </div> */}
-
-            {/* color #2 */}
-            {/* <div 
-            className="palette-color"
-            style={{backgroundColor: color2}}
-            onClick={()=>{setStageColor(color2);}}
-            >
-                <p>{color2}</p>
-            </div> */}
-
-            {/* color #3 */}
-            {/* <div 
-            className="palette-color"
-            style={{backgroundColor: color3}}
-            onClick={()=>{setStageColor(color3);}}
-
-            >
-                <p>{color3}</p>
-            </div> */}
-
-            {/* color #4 */}
-            {/* <div 
-            className="palette-color"
-            style={{backgroundColor: color4}}
-            onClick={()=>{setStageColor(color4);}}
-
-            >
-                <p>{color4}</p>
-            </div> */}
-
-            {/* color #5 */}
-            {/* <div 
-            className="palette-color"
-            style={{backgroundColor: color5}}
-            onClick={()=>{setStageColor(color5);}}
-
-            >
-                <p>{color5}</p>
-            </div> */}
-
-            {/* color #6 */}
-            {/* <div 
-            className="palette-color"
-            style={{backgroundColor: color6}}
-            onClick={()=>{setStageColor(color6);}}
-
-            >
-                <p>{color6}</p>
-            </div> */}
       </div> 
       
       
