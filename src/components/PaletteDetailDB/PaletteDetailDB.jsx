@@ -2,6 +2,7 @@ import {useHistory} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
+import ColorItem from '../ColorItem/ColorItem.jsx';
 //fontawesome
 import {FontAwesomeIcon}from '@fortawesome/react-fontawesome';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +16,6 @@ function PaletteDetailDB () {
    const stagedPalette = useSelector(store => store.stagedPalette);
    const [stageColor, setStageColor] = useState('#fff');
    const pic = stagedPalette.img_url;
-   const [mask, setMask] = useState(true);
    const [color1, setColor1] = useState(stagedPalette.hex0);
    const [color2, setColor2] = useState(stagedPalette.hex1);
    const [color3, setColor3] = useState(stagedPalette.hex2);
@@ -23,11 +23,32 @@ function PaletteDetailDB () {
    const [color5, setColor5] = useState(stagedPalette.hex4);
    const [color6, setColor6] = useState(stagedPalette.hex5);
 
-
-   const handleColorChange = (color) => {
+    //6 functions that take in the onChange value of color picker 
+    //and assign it to respected local color state.
+   const handleColorChange1 = (color) => {
         setStageColor(color.hex);
         setColor1(stageColor);
-  };//end of colorChange
+    };//end of colorChange
+  const handleColorChange2 = (color) => {
+    setStageColor(color.hex);
+    setColor2(stageColor);
+    };//end of colorChange
+  const handleColorChange3 = (color) => {
+        setStageColor(color.hex);
+        setColor3(stageColor);
+    };//end of colorChange
+  const handleColorChange4 = (color) => {
+        setStageColor(color.hex);
+        setColor4(stageColor);
+    };//end of colorChange
+  const handleColorChange5 = (color) => {
+        setStageColor(color.hex);
+        setColor5(stageColor);
+    };//end of colorChange
+  const handleColorChange6 = (color) => {
+        setStageColor(color.hex);
+        setColor6(stageColor);
+    };//end of colorChange
 
    const handleBack = () => {
       history.push('/palette-list');
@@ -36,11 +57,11 @@ function PaletteDetailDB () {
       })
    };//end of handleBack
 
-   const handleEdit = () => {
-        console.log('edit clicked');
-        setMask(!mask);
+//    const handleEdit = () => {
+//         console.log('edit clicked');
+//         setMask(!mask);
+//    } // end of handleEdit
 
-   } // end of handleEdit
 //    const testFunction = () =>{
 //         setStageColor(color1);
 
@@ -67,7 +88,10 @@ function PaletteDetailDB () {
    console.log('this is stagedPalette reducer', stagedPalette);
    console.log('this is stageColor', stageColor);
    console.log('color 1', color1);
-   console.log('this is mask:', mask);
+   console.log('color 2', color2);
+   console.log('color 3', color3);
+
+
 
 
    return(
@@ -77,79 +101,117 @@ function PaletteDetailDB () {
       <button onClick={handleBack}>Back</button>
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleSave}>Save</button>
+      
       <div className="container">
+            <ColorItem 
+            color={color1}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange1}
+            onClick={()=>{setStageColor(color1);}}
+            />
+            <ColorItem 
+            color={color2}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange2}
+            onClick={()=>{setStageColor(color2);}}
+            />
+            <ColorItem 
+            color={color3}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange3}
+            onClick={()=>{setStageColor(color3);}}
+            />
+            <ColorItem 
+            color={color4}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange4}
+            onClick={()=>{setStageColor(color4);}}
+            />
+            <ColorItem 
+            color={color5}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange5}
+            onClick={()=>{setStageColor(color5);}}
+            />
+            <ColorItem 
+            color={color6}
+            className="palette-color"
+            stageColor={stageColor}
+            handleColorChange={handleColorChange6}
+            onClick={()=>{setStageColor(color6);}}
+            />
+            
       
                {/* color #1 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color1}}
             onClick={()=>{setStageColor(color1);}}
-            >
-                <p>{color1}</p>
+            > */}
+                {/* <p>{color1}</p>
                 <FontAwesomeIcon 
                 icon={faPenToSquare}
                 onClick={handleEdit}
-                />
+                /> */}
                 {/* <FontAwesomeIcon icon="fa-solid fa-pen-to-square" /> */}
-                
-            </div>
+{/*                 
+            </div> */}
 
             {/* color #2 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color2}}
             onClick={()=>{setStageColor(color2);}}
             >
                 <p>{color2}</p>
-            </div>
+            </div> */}
 
             {/* color #3 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color3}}
             onClick={()=>{setStageColor(color3);}}
 
             >
                 <p>{color3}</p>
-            </div>
+            </div> */}
 
             {/* color #4 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color4}}
             onClick={()=>{setStageColor(color4);}}
 
             >
                 <p>{color4}</p>
-            </div>
+            </div> */}
 
             {/* color #5 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color5}}
             onClick={()=>{setStageColor(color5);}}
 
             >
                 <p>{color5}</p>
-            </div>
+            </div> */}
 
             {/* color #6 */}
-            <div 
+            {/* <div 
             className="palette-color"
             style={{backgroundColor: color6}}
             onClick={()=>{setStageColor(color6);}}
 
             >
                 <p>{color6}</p>
-            </div>
+            </div> */}
       </div> 
-      {!mask && 
-        <ChromePicker
-        color={stageColor}
-        onChange ={handleColorChange}
-        disableAlpha={true}
-        />
-      }
+      
       
       
     </>
