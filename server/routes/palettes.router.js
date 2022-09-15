@@ -71,15 +71,37 @@ router.delete('/:id', (req,res) => {
  */
  router.put('/:id', (req,res) => {
 
-  const id = req.params.id;
+  // const id = req.params.id;
   console.log('this is req.params in put route', req.params.id);
   console.log('this is req.body in put route', req.body);
-  
-  const queryText = `UPDATE "palette" 
-  SET "hex0" = $1  
-  WHERE "id" = $2;`
+  console.log('this is req.body in put route, color1', req.body.color1);
+  console.log('this is req.body in put route, color2', req.body.color2);
+  console.log('this is req.body in put route, color3', req.body.color3);
+  console.log('this is req.body in put route, color4', req.body.color4);
+  console.log('this is req.body in put route, color5', req.body.color5);
+  console.log('this is req.body in put route, color6', req.body.color6);
 
-  const queryValues = [req.body.color1 , id ]
+
+  
+  const queryText = `
+  UPDATE "palette" 
+  SET "hex0" = $1, 
+  "hex1" = $2,
+  "hex2" = $3,
+  "hex3" = $4,
+  "hex4" = $5,
+  "hex5" = $6
+  WHERE "id" = $7;`;
+
+  const queryValues = [ 
+    req.body.color1,
+    req.body.color2,
+    req.body.color3,
+    req.body.color4,
+    req.body.color5,
+    req.body.color6,
+    req.params.id
+  ]
 
   pool.query(queryText, queryValues)
   .then(result => {

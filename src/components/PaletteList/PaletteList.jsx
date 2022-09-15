@@ -41,7 +41,6 @@ function PaletteList () {
                 return (
                     
                         <PaletteItem 
-                        className="palette-list-container"
                         key={color.id}
                         color={color}
                         />

@@ -40,7 +40,7 @@ function* deletePalette(action) {
 
 function* updateColors(action) {
     try {
-        yield axios.put(`/api/palettes/${action.payload.id}`, {color1: action.payload.hex0});
+        yield axios.put(`/api/palettes/${action.payload.id}`, {color1: action.payload.hex0, color2: action.payload.hex1, color3: action.payload.hex2, color4: action.payload.hex3, color5: action.payload.hex4, color6: action.payload.hex5});
         yield put({type: 'FETCH_PALETTES'});
 
     }catch(error){
