@@ -50,7 +50,7 @@ function PaletteItem ({color}) {
         >
 
             {isHovering && (
-            <div>
+            <div className="palette-name-hover">
                 <h2>{color.palette_name}</h2>    
             </div>
             )}
