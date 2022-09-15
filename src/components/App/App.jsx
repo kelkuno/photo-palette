@@ -111,6 +111,14 @@ function App() {
             <PaletteDetailDB />
           </ProtectedRoute>
 
+          <ProtectedRoute
+            // logged in shows PaletteDetail else shows LoginPage
+            exact
+            path="/info-page"
+          >
+            <InfoPage />
+          </ProtectedRoute>
+
           <Route
             exact
             path="/login"

@@ -18,19 +18,27 @@ function PaletteList () {
     const dispatch = useDispatch();
     const history = useHistory();
 
+
+
     useEffect(()=>{
         dispatch({type: 'FETCH_PALETTES'})
     }, []);
 
-    console.log('user', user);
-    console.log('palette', palette);
-    console.log('stagedPalette', stagedPalette);
+    // console.log('user', user);
+    // console.log('palette', palette);
+    // console.log('stagedPalette', stagedPalette);
 
 
     const handleNewPalette = () => {
         dispatch({type:'PREPARE_FORM'});
         history.push('/palette-form')
     }//end of handleNew Palette
+
+    const handleInfo = () => {
+        history.push('/info-page');
+    }
+
+   
 
    
 
@@ -50,6 +58,7 @@ function PaletteList () {
             })}
         </div>
         <button onClick={handleNewPalette}>Generate Palette</button>
+        <button onClick={handleInfo}>Info</button>
         </>
     );
 
