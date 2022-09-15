@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
 import ColorItem from '../ColorItem/ColorItem.jsx';
+import './PaletteDetailDB.css';
 
 
 function PaletteDetailDB () {
@@ -101,42 +102,36 @@ function PaletteDetailDB () {
       <div className="container">
             <ColorItem 
             color={color1}
-            className="palette-color"
             stageColor={stageColor}
             handleColorChange={handleColorChange1}
             onClick={()=>{setStageColor(color1);}}
             />
             <ColorItem 
             color={color2}
-            className="palette-color"
             stageColor={stageColor}
             handleColorChange={handleColorChange2}
             onClick={()=>{setStageColor(color2);}}
             />
             <ColorItem 
             color={color3}
-            className="palette-color"
             stageColor={stageColor}
             handleColorChange={handleColorChange3}
             onClick={()=>{setStageColor(color3);}}
             />
             <ColorItem 
             color={color4}
-            className="palette-color"
             stageColor={stageColor}
             handleColorChange={handleColorChange4}
             onClick={()=>{setStageColor(color4);}}
             />
             <ColorItem 
             color={color5}
-            className="palette-color"
             stageColor={stageColor}
             handleColorChange={handleColorChange5}
             onClick={()=>{setStageColor(color5);}}
             />
             <ColorItem 
             color={color6}
-            className="palette-color"
             stageColor={stageColor}
             handleColorChange={handleColorChange6}
             onClick={()=>{setStageColor(color6);}}

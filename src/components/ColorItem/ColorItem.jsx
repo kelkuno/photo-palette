@@ -3,6 +3,7 @@ import {FontAwesomeIcon}from '@fortawesome/react-fontawesome';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
+import './ColorItem.css';
 
 function ColorItem ({color, handleColorChange, stageColor}) {
    const [mask, setMask] = useState(true);
@@ -15,7 +16,7 @@ function ColorItem ({color, handleColorChange, stageColor}) {
     return (
         <>
             <div 
-            className="palette-color"
+            className="color-box"
             style={{backgroundColor: color}}
             >
                 <p>{color}</p>
