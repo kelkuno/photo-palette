@@ -8,7 +8,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // console.log('req.user', req.user);
   const queryText = `SELECT * FROM "palette"
-  WHERE "palette".user_id = $1;`
+  WHERE "palette".user_id = $1
+  ORDER BY "id";`
 
   let value = [req.user.id]
 
@@ -91,7 +92,7 @@ router.delete('/:id', (req,res) => {
   "hex3" = $4,
   "hex4" = $5,
   "hex5" = $6
-  WHERE "id" = $7;`;
+  WHERE "id" = $7`;
 
   const queryValues = [ 
     req.body.color1,
