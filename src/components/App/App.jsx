@@ -24,7 +24,6 @@ import PaletteForm from '../PaletteForm/PaletteForm';
 import GeneratePalette from '../GeneratePalette/GeneratePalette';
 import PaletteDetailDB from '../PaletteDetailDB/PaletteDetailDB';
 
-//font-awesome test
 
 
 
