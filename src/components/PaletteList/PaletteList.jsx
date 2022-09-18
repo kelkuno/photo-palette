@@ -33,11 +33,6 @@ function PaletteList () {
         dispatch({type:'PREPARE_FORM'});
         history.push('/palette-form')
     }//end of handleNew Palette
-
-    const handleInfo = () => {
-        history.push('/info-page');
-    }
-
    
 
    
@@ -58,7 +53,6 @@ function PaletteList () {
             })}
         </div>
         <button onClick={handleNewPalette}>Generate Palette</button>
-        <button onClick={handleInfo}>Info</button>
         </>
     );
 

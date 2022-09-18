@@ -5,8 +5,9 @@ body,
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0px;
+  background: grey;
 }
 
 img {
@@ -21,6 +22,10 @@ Container
 .container {
   padding: 20px;
 }
+.container-center{
+  padding: 20px;
+  text-align: center;
+}
 
 /* --------------------------------------------------------------------------------
 Button
@@ -29,11 +34,11 @@ Button
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  border-color: #014041;
-  border-width: 1px 1px 3px;
+  border-color: black;
+  border-width: 2px 2px 4px;
   border-radius: 4px;
-  background-color: #00acb0;
-  color: #f8f8f8;
+  background-color: white;
+  color: black;
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
@@ -55,25 +60,28 @@ Button
 }
 
 .btn:hover {
-  background-color: #008183;
+  background-color: #000000;
   text-decoration: none;
+  color:white;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
 .btn_asLink {
   padding: 0;
-  border-width: 0;
-  border-bottom: 1px solid #444;
+  border-width: 0px;
+  border-bottom: 4px solid #05f3f7;
   border-radius: 0;
   background: none;
   font: inherit;
-  color: #444;
+  font-weight: 700;
+  padding: .5em;
+  color: rgba(0, 0, 0, 0.92);
 }
 
 .btn_asLink:hover {
   background-color: transparent;
-  border-color: #008183;
-  color: #008183;
+  border-color: #05f3f7;
+  color: #05f3f7;
 }
 
 /* --------------------------------------------------------------------------------

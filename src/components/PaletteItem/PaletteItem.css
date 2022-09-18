@@ -2,30 +2,35 @@
     
     flex-wrap: wrap;
     width: 65px;
-    height: 130px;
+    height: 135px;
+    
    
-    /* border: solid 2px red; */
+    /* border: solid 1px red; */
     
 }
 
 .palette-container {
-/* 
-    border: solid 10px green; */
-    display:grid;
+
+    /* border: solid 1px green; */
+    display: flex;
+    flex-direction: column;
     height: 450px;
     width: 450px;
     border-radius: 25px;
     overflow: hidden;
     position: relative;
+    justify-content: space-between;
+    background: #DEDEDE;
+
   
 
 }
 
 .colors-container {
-    /* border: solid pink 5px; */
+    /* border: solid pink 1px; */
+    
     width:450px;
     display: flex;
-    flex: end;
     justify-content: space-between;
     
 }
@@ -33,9 +38,6 @@
 .palette-list-pic {
     /* border: solid black 4px; */
     height: 300px;
-  
-    
-    
 }
 
 .palette-list-pic img {
