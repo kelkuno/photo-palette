@@ -38,7 +38,10 @@ function PaletteForm () {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form 
+            onSubmit={handleSubmit}
+            className="formPanel"
+            >
                 <input 
                 type="text" 
                 placeholder="new palette name"
@@ -49,9 +52,15 @@ function PaletteForm () {
                 placeholder="img url"
                 onChange={handlePic}
                 />
-                <button>Generate Palette</button>
+                <button className="btn">Generate Palette</button>
+                <button 
+                onClick={handleBack}
+                className="btn"
+                >
+                    Back
+                </button>
             </form>
-            <button onClick={handleBack}>Back</button>
+            
         </>
     );
 } // end of PaletteForm

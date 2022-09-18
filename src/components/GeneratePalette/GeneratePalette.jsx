@@ -44,28 +44,31 @@ function PaletteDetail () {
 
     return (
         <>
-            <ColorExtractor
-            getColors={getColors} 
-            maxColors={256}
-            >
-                <img src={pic} alt="user-Upload" />
-            
-            </ColorExtractor>
-            <div className="container">
+            <div class="detail-img">
+                <ColorExtractor
+                getColors={getColors} 
+                maxColors={256}
+                >
+                    <img src={pic} alt="user-Upload" />
+                
+                </ColorExtractor>
+            </div>
+            <div class="detail-buttons">
+                <button onClick={handleBack} className="btn">Back</button>
+                <button onClick={handleSave} className="btn">Save Palette</button>
+            </div>
+            <div className="color-container">
             {colors.map((color, id) => (
                 <div
                 key={id}
-                className="color-box"
+                className="color-boxes"
                 style={{backgroundColor: color}}
                 >
-                {color}
+                {/* {color} */}
                 </div>
             ))}
             </div> 
-            <button onClick={handleBack}>Back</button>
-            <button>Delete</button>
-            <button>Edit</button>
-            <button onClick={handleSave}>Save Palette</button>
+            
 
 
 

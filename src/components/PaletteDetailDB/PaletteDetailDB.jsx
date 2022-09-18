@@ -93,13 +93,17 @@ function PaletteDetailDB () {
 
    return(
     <>
-      <h2>this is palette detail DB</h2>
-      <img src={pic} className="user-pic" />
-      <button onClick={handleBack}>Back</button>
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={handleSave}>Save</button>
-      
-      <div className="container">
+    <div className="detail-wrapper">
+      <div className="detail-img">
+        <img src={pic} className="user-pic" />
+        <h2>{stagedPalette.palette_name}</h2>
+      </div>
+      <div className="detail-buttons">
+        <button onClick={handleBack} className="btn">Back</button>
+        <button onClick={handleDelete} className="btn">Delete</button>
+        <button onClick={handleSave} className="btn">Save</button>
+      </div>
+      <div className="color-container">
             <ColorItem 
             color={color1}
             stageColor={stageColor}
@@ -136,8 +140,8 @@ function PaletteDetailDB () {
             handleColorChange={handleColorChange6}
             onClick={()=>{setStageColor(color6);}}
             />
-            
-      </div> 
+        </div> 
+      </div>
       
       
       

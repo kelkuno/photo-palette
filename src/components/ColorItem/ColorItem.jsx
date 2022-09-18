@@ -4,6 +4,7 @@ import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
 import './ColorItem.css';
+import { withRouter } from 'react-router-dom';
 
 function ColorItem ({color, handleColorChange, stageColor}) {
    const [mask, setMask] = useState(true);
@@ -15,23 +16,30 @@ function ColorItem ({color, handleColorChange, stageColor}) {
 
     return (
         <>
-            <div 
-            className="color-box"
-            style={{backgroundColor: color}}
-            >
-                <p>{color}</p>
-                <FontAwesomeIcon 
-                icon={faPenToSquare}
-                onClick={handleEdit}
-                />  
+            <div className="color-item-wrapper">
+                <div 
+                className="color-boxes"
+                style={{backgroundColor: color}}
+                >
+                </div>
+                <div className="icon">
+                    <FontAwesomeIcon 
+                    icon={faPenToSquare}
+                    onClick={handleEdit}
+                    /> 
+                      <p>{color}</p> 
+                </div>
+                <div className="color-picker-wrap">
+                    {!mask && 
+                    <ChromePicker
+                    color={stageColor}
+                    onChange ={handleColorChange}
+                    disableAlpha={true}
+                    className="color-picker"
+                    />
+                    }
+                </div>
             </div>
-            {!mask && 
-            <ChromePicker
-            color={stageColor}
-            onChange ={handleColorChange}
-            disableAlpha={true}
-            />
-            }
         </>
     );
 

@@ -7,7 +7,7 @@ body,
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
-  background: grey;
+  background: #DEDEDE;
 }
 
 img {
@@ -42,6 +42,7 @@ Button
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .btn_sizeMin {
@@ -69,7 +70,7 @@ Button
 .btn_asLink {
   padding: 0;
   border-width: 0px;
-  border-bottom: 4px solid #05f3f7;
+  border-bottom: 4px solid black;
   border-radius: 0;
   background: none;
   font: inherit;
@@ -80,8 +81,8 @@ Button
 
 .btn_asLink:hover {
   background-color: transparent;
-  border-color: #05f3f7;
-  color: #05f3f7;
+  border-color: #a360fa;
+  color: #a360fa;
 }
 
 /* --------------------------------------------------------------------------------
@@ -112,9 +113,11 @@ Form Treatment
   background-color: #efefef;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+  border: solid 4px lime;
+  text-align: center;
 }
 
 input {
-  margin: 5px;
-  margin-bottom: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
 }

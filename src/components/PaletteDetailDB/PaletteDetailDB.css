@@ -1,6 +1,41 @@
-.color-box {
-    width: 100px;
-    height: 100px;
-    border: 2px solid blue;
-    margin: 0 auto;
-  }
+
+.color-container{
+  border: solid 2px magenta;
+  display: flex;
+  justify-content: space-evenly;
+}
+.detail-wrapper{
+  border: solid 5px black;
+  background: #DEDEDE;
+  padding: 0 1em;
+
+}
+.detail-img{
+  border: solid 2px aqua;
+  display: flex;
+  /* margin: 2em 0; */
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+
+
+}
+.detail-img img{
+  width:600px;
+  height: 400px;
+  object-fit: cover;
+  border: solid blueviolet;
+  margin: auto;
+
+}
+.detail-buttons{
+  border: solid 2px green;
+  display: flex;
+  justify-content: center;
+  column-gap: 2em;
+  padding: 2em;
+
+}
