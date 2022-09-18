@@ -39,6 +39,16 @@ function PaletteList () {
 
     return (
         <>
+        <div className="container">
+            <button 
+            onClick={handleNewPalette}
+            className="btn"
+            >
+                Generate Palette
+            </button>
+        </div>
+        
+
         <div className="palette-list-container">
             {palette.map(color =>{
             
@@ -52,7 +62,7 @@ function PaletteList () {
                 );
             })}
         </div>
-        <button onClick={handleNewPalette}>Generate Palette</button>
+        
         </>
     );
 

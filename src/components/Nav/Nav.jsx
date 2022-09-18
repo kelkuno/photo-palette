@@ -9,10 +9,10 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home">
+      <Link to="/palette-list">
         <h2 className="nav-title">photo.palette</h2>
       </Link>
-      <div>
+      <div className="link-container">
         {/* If no user is logged in, show these links */}
         {!user.id && (
           // If there's no user, show login/registration links
@@ -32,7 +32,7 @@ function Nav() {
               Info Page
             </Link>
 
-            <LogOutButton className="navLink" />
+            <LogOutButton className="navLink log-out-nav" />
           </>
         )}
 
