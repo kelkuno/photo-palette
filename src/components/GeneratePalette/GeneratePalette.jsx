@@ -37,10 +37,6 @@ function PaletteDetail () {
     const handleBack = () => {
         history.push('/palette-list');
     }//end of handleBack
-    
-    console.log(stagedPalette);
-    console.log('this is colors', colors);
-    console.log(pic);
 
     return (
         <>

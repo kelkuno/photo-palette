@@ -4,10 +4,11 @@ import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import { ChromePicker } from 'react-color';
 import {useState} from 'react';
 import './ColorItem.css';
-import { withRouter } from 'react-router-dom';
+
 
 function ColorItem ({color, handleColorChange, stageColor}) {
    const [mask, setMask] = useState(true);
+
 
    const handleEdit = () => {
     console.log('edit clicked');

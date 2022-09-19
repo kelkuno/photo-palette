@@ -24,11 +24,6 @@ function PaletteList () {
         dispatch({type: 'FETCH_PALETTES'})
     }, []);
 
-    // console.log('user', user);
-    // console.log('palette', palette);
-    // console.log('stagedPalette', stagedPalette);
-
-
     const handleNewPalette = () => {
         dispatch({type:'PREPARE_FORM'});
         history.push('/palette-form')

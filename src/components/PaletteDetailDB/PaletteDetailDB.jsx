@@ -1,6 +1,5 @@
 import {useHistory} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import { ChromePicker } from 'react-color';
 import {useState} from 'react';
 import ColorItem from '../ColorItem/ColorItem.jsx';
 import './PaletteDetailDB.css';
@@ -54,16 +53,6 @@ function PaletteDetailDB () {
       })
    };//end of handleBack
 
-//    const handleEdit = () => {
-//         console.log('edit clicked');
-//         setMask(!mask);
-//    } // end of handleEdit
-
-//    const testFunction = () =>{
-//         setStageColor(color1);
-
-//    };
-
    const handleDelete = () => {
       console.log('delete clicked!');
       dispatch({type:'DELETE_PALETTE',
@@ -81,14 +70,6 @@ function PaletteDetailDB () {
       history.push('/palette-list');
 
    };//end of handleEdit
-
-   console.log('this is stagedPalette reducer', stagedPalette);
-   console.log('this is stageColor', stageColor);
-   console.log('color 1', color1);
-   console.log('color 2', color2);
-   console.log('color 3', color3);
-
-
 
 
    return(
