@@ -43,44 +43,34 @@ Before you get started, make sure you have the following software installed on y
 
 - [Node.js](https://nodejs.org/en/)
 
+### Installation
+
+1. Fork the repository
+2. Copy the SSH key in your new repository
+3. In your terminal type...  `git clone {paste SSH link}`
+4. Navigate into the repository's folder in your terminal
+5. Open VS Code (or editor of your choice) and open the folder
+6. In the terminal of VS Code run `npm install` to install all dependencies
+    (this is important to the name npm packages that are required to run this app.)
+    ** Please note that you may have to run 'npm install --force' if 'npm install' errors out. 
+7. Create a database named `photo_palette` in PostgresSQL
+If you would like to name your database something else, you will need to change `photo_palette` to the name of your new database name in `server/modules/pool.js` file
+8. The queries in the database.sql file are set up to create all the necessary tables that you need to test the app. Copy and paste those queries in the SQL query of the database.
+9. Run `npm run server` in your VS Code terminal
+10. Open a second terminal by clicking the + button and run `npm run client`
+
+## Usage
+
+Once everything is installed and running it should open in your default browser - if not, navigate to http://localhost:3000/#/.
 
 
 # To see the fully functional site, please visit: 
 https://peaceful-meadow-98495.herokuapp.com/#/user
 
+Have fun playing around the app! You can register and make your own account and start generating your palettes. Otherwise, if you would like to see some previously saved palettes, please feel free to use these log-in credentials.
 
-
-
-
-Prerequisites
-Link to software that is required to install the app (e.g. node).
-
-Node.js
-List other prerequisites here
-Installation
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
-
-If your application has secret keys (for example -- Twilio), make sure you tell them how to set that up, both in getting the key and then what to call it in the .env file.
-
-Create a database named your database name,
-The queries in the tables.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
-Open up your editor of choice and run an npm install
-Run npm run server in your terminal
-Run npm run client in your terminal
-The npm run client command will open up a new browser tab for you!
-Usage
-How does someone use this application? Tell a user story here.
-
-xxx
-xxx
-xxx
-xxx
-xxx
-xxx
-Built With
-List technologies and frameworks here
-
-
+Username: kelsey
+Password: magic
 
 # Acknowledgement
 Thanks to Prime Digital Academy who equipped and helped me to make this application a reality. Thank you to all the instructors and the Mitchison Cohort for all the support. 
