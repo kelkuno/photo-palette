@@ -18,6 +18,10 @@ My app will generate color palettes from photos that users upload. The idea is a
 
 ## Screenshots
 
+![Palette Dashboard](/public/palette-dashboard-screenshot.png)
+
+![Palette Generator](/public/generate-palettee-screenshot.png)
+
 ## Built With
 
 <a href="https://www.w3schools.com/w3css/defaulT.asp"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40px" width="40px" /></a>
