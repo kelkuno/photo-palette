@@ -53,11 +53,17 @@ Before you get started, make sure you have the following software installed on y
 6. In the terminal of VS Code run `npm install` to install all dependencies
     (this is important to the name npm packages that are required to run this app.)
     ** Please note that you may have to run 'npm install --force' if 'npm install' errors out. 
-7. Create a database named `photo_palette` in PostgresSQL
+7. Create a `.env` file at the root of the project and paste this line into the file:
+    
+    SERVER_SESSION_SECRET=superDuperSecret
+    
+    While you're in your new .env file, take the time to replace superDuperSecret with some long random string like 25POUbVtx6RKVNWszd9ERB9Bb6 to keep your application secure. Here's a site that can help you: https://passwordsgenerator.net/. If you don't do this step, create a secret with less than eight characters, or leave it as superDuperSecret, you will get a warning.
+  
+8. Create a database named `photo_palette` in PostgresSQL
 If you would like to name your database something else, you will need to change `photo_palette` to the name of your new database name in `server/modules/pool.js` file
-8. The queries in the database.sql file are set up to create all the necessary tables that you need to test the app. Copy and paste those queries in the SQL query of the database.
-9. Run `npm run server` in your VS Code terminal
-10. Open a second terminal by clicking the + button and run `npm run client`
+9. The queries in the database.sql file are set up to create all the necessary tables that you need to test the app. Copy and paste those queries in the SQL query of the database.
+10. Run `npm run server` in your VS Code terminal
+11. Open a second terminal by clicking the + button and run `npm run client`
 
 ## Usage
 
