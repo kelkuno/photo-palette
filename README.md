@@ -73,10 +73,7 @@ Once everything is installed and running it should open in your default browser 
 # To see the fully functional site, please visit: 
 https://peaceful-meadow-98495.herokuapp.com/#/user
 
-Have fun playing around the app! You can register and make your own account and start generating your palettes. Otherwise, if you would like to see some previously saved palettes, please feel free to use these log-in credentials.
-
-Username: kelsey
-Password: magic
+Have fun playing around the app! You can register and make your own account and start generating your palettes. 
 
 # Acknowledgement
 Thanks to Prime Digital Academy who equipped and helped me to make this application a reality. Thank you to all the instructors and the Mitchison Cohort for all the support. 
