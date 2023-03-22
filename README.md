@@ -75,6 +75,9 @@ https://peaceful-meadow-98495.herokuapp.com/#/user
 
 Have fun playing around the app! You can register and make your own account and start generating your palettes. 
 
+* I have found that image url's from Pixabay work great as example palettes: (https://pixabay.com/) Here's a sample photo url to try on generating your first palette: https://cdn.pixabay.com/photo/2016/12/15/20/21/texture-1909992_1280.jpg
+
+
 # Acknowledgement
 Thanks to Prime Digital Academy who equipped and helped me to make this application a reality. Thank you to all the instructors and the Mitchison Cohort for all the support. 
 
